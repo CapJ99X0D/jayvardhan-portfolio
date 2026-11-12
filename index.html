@@ -162,4 +162,6 @@ const progress=document.querySelector('.progress'),sectionLinks=[...document.que
 })();
 </script><script>
 (function(){const cards=[...document.querySelectorAll('.project-grid.reel .project')];if(!cards.length)return;function sync(){cards.forEach(c=>{const angle=c.style.getPropertyValue('--reel-angle')||'0deg';c.style.transform=`translate(-50%,-50%) rotateX(${angle}) translateZ(260px)`});requestAnimationFrame(sync)}sync()})();
+</script><script>
+(function(){const stage=document.querySelector('.scroll-expand-media');if(!stage)return;function polish(){const p=Math.max(0,Math.min(1,(scrollY-innerHeight*.05)/(innerHeight*.82)));stage.style.filter=`blur(${Math.max(0,p*.75)}px)`;requestAnimationFrame(polish)}polish()})();
 </script></body></html>
